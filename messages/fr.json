@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "symptoms": "Vérificateur de Symptômes",
+    "encyclopedia": "Encyclopédie",
+    "medicines": "Médicaments",
+    "directory": "Annuaire Santé",
+    "tools": "Outils",
+    "articles": "Articles",
+    "about": "À Propos",
+    "emergency": "🚨 URGENCE 190"
+  },
+  "hero": {
+    "badge": "Votre santé commence ici",
+    "title": "Afya",
+    "subtitle": "Santé Digitale Tunisienne",
+    "description": "La première plateforme tunisienne complète de santé digitale. Votre santé, notre priorité.",
+    "search_placeholder": "Recherchez un symptôme, une maladie, un médicament...",
+    "cta_primary": "Évaluer mes symptômes",
+    "cta_secondary": "Explorer l'encyclopédie",
+    "stats": {
+      "symptoms": "200+ Symptômes",
+      "diseases": "100+ Maladies",
+      "medicines": "200+ Médicaments",
+      "accessibility": "Gratuit & 24/7"
+    }
+  },
+  "how_it_works": {
+    "title": "Comment ça marche",
+    "step1": {
+      "title": "Sélectionnez vos symptômes",
+      "desc": "Utilisez notre silhouette interactive"
+    },
+    "step2": {
+      "title": "Obtenez une orientation",
+      "desc": "Algorithme de triage médical intelligent"
+    },
+    "step3": {
+      "title": "Consultez les ressources",
+      "desc": "Accédez aux fiches et annuaires"
+    }
+  },
+  "features": {
+    "symptoms": {
+      "title": "Vérificateur de Symptômes Intelligent",
+      "desc": "Interface visuelle interactive avec algorithme de triage médical.",
+      "cta": "Commencer l'évaluation →"
+    },
+    "encyclopedia": {
+      "title": "Encyclopédie Médicale",
+      "desc": "100+ fiches maladies détaillées en français et arabe.",
+      "cta": "Explorer →"
+    },
+    "medicines": {
+      "title": "Guide des Médicaments TN",
+      "desc": "Prix, remboursement CNAM, alternatives génériques.",
+      "cta": "Rechercher →"
+    },
+    "directory": {
+      "title": "Annuaire Santé Tunisie",
+      "desc": "Hôpitaux, cliniques, pharmacies de garde géolocalisés.",
+      "cta": "Localiser →"
+    },
+    "tools": {
+      "title": "Outils & Calculateurs",
+      "desc": "IMC, calories, risque cardiovasculaire, hydratation.",
+      "cta": "Calculer →"
+    },
+    "articles": {
+      "title": "Articles & Prévention",
+      "desc": "Conseils santé, nutrition, exercice adaptés à la Tunisie.",
+      "cta": "Lire →"
+    },
+    "analytics": {
+      "title": "Données Santé Publique",
+      "desc": "Tendances, statistiques anonymisées, alertes épidémiques.",
+      "cta": "Voir →"
+    }
+  },
+  "triage": {
+    "emergency": {
+      "title": "URGENCE IMMÉDIATE",
+      "desc": "Score ≥15 or red flags",
+      "action": "Appeler SAMU 190 immédiatement"
+    },
+    "urgent": {
+      "title": "CONSULTATION RAPIDE",
+      "desc": "Score 10-14",
+      "action": "Consulter dans les 24 heures"
+    },
+    "normal": {
+      "title": "CONSULTATION NORMALE",
+      "desc": "Score 5-9",
+      "action": "Prendre RDV médecin"
+    },
+    "selfcare": {
+      "title": "AUTO-SOIN",
+      "desc": "Score <5",
+      "action": "Repos et surveillance"
+    }
+  },
+  "conditions": {
+    "title": "Affections Populaires",
+    "diabetes": "Diabète",
+    "hypertension": "Hypertension",
+    "migraine": "Migraine",
+    "asthma": "Asthme",
+    "cold": "Rhume",
+    "back_pain": "Mal de Dos",
+    "more": "En savoir plus →"
+  },
+  "trust": {
+    "ministry": "Ministère de la Santé",
+    "iso": "Certifié ISO",
+    "support": "Support 24/7",
+    "validated": "Contenu validé médicalement",
+    "secure": "Données sécurisées",
+    "free": "Gratuit & Sans publicité"
+  },
+  "footer": {
+    "about": "Améliorer l'accès aux soins de santé numériques pour tous les Tunisiens.",
+    "rights": "Tous droits réservés.",
+    "links": "Liens Rapides",
+    "legal": "Légal",
+    "emergencies": "Urgences",
+    "samu": "SAMU: 190",
+    "police": "Police: 197",
+    "protection": "Protection Civile: 198",
+    "poison": "Centre Anti-Poison: +216 71 245 000",
+    "made_with": "Fait avec ❤️ pour la Tunisie"
+  },
+  "tools": {
+    "title": "Outils & Calculateurs",
+    "subtitle": "Suivez vos indicateurs de santé en temps réel",
+    "bmi": {
+      "title": "Calculateur d'IMC",
+      "desc": "Calculez votre Indice de Masse Corporelle",
+      "weight": "Poids (kg)",
+      "height": "Taille (cm)",
+      "calculate": "Calculer l'IMC",
+      "result": "Votre IMC est de",
+      "category": "Catégorie",
+      "underweight": "Insuffisance pondérale",
+      "normal": "Poids normal",
+      "overweight": "Surpoids",
+      "obese": "Obésité"
+    }
+  },
+  "symptoms": {
+    "title": "Vérificateur de Symptômes",
+    "subtitle": "Analyse intelligente de votre santé",
+    "select_part": "Sélectionnez une zone",
+    "instruction": "Cliquez sur la partie du corps où vous ressentez une gêne pour voir les symptômes associés.",
+    "choose_description": "Veuillez sélectionner les symptômes que vous ressentez dans cette zone.",
+    "search_placeholder": "Rechercher un symptôme...",
+    "empty_state": "Sélectionnez une zone sur la carte pour commencer.",
+    "analyze": "Analyser les symptômes",
+    "dashboard_label": "Tableau de Bord Anatomique",
+    "disclaimer": {
+      "title": "AVERTISSEMENT MÉDICAL",
+      "text": "Cet outil est à titre informatif et ne fournit pas de diagnostic médical. Si vous vivez une urgence médicale, veuillez appeler immédiatement le 190 (Tunisie)."
+    },
+    "head": {
+      "headache": "Mal de tête",
+      "dizziness": "Vertiges",
+      "vision": "Troubles de la vision"
+    },
+    "chest": {
+      "pain": "Douleur thoracique",
+      "breath": "Essoufflement",
+      "cough": "Toux persistante"
+    },
+    "abdomen": {
+      "stomach_pain": "Douleur abdominale",
+      "nausea": "Nausées",
+      "bloating": "Ballonnements"
+    },
+    "arms": {
+      "numbness": "Engourdissement",
+      "joint_pain": "Douleur articulaire"
+    },
+    "legs": {
+      "cramps": "Crampes",
+      "swelling": "Gonflement"
+    }
+  }
+}
