@@ -22,7 +22,7 @@ export default function SymptomsPage() {
     const [results, setResults] = useState<DiagnosisResult[] | null>(null);
 
     const handleGeneralSymptoms = () => {
-        setSelectedPart("head"); 
+        setSelectedPart("face"); 
     };
 
     const handleEvaluate = async (selections: SelectedSymptom[]) => {
