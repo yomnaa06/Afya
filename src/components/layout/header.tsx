@@ -1,18 +1,28 @@
-// Server Component — can read cookies + translations on the server
+"use client";
+
+import { useEffect, useState } from "react";
 import { Link } from "@/navigation";
-import { getTranslations, getLocale } from "next-intl/server";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Heart, Phone } from "lucide-react";
 import { getServerSession } from "@/lib/auth-actions";
 import { HeaderUserMenu } from "@/components/layout/header-user-menu";
+import { AuthUser } from "@/lib/mock-auth";
 
-export async function Header() {
-  const t = await getTranslations();
-  const locale = await getLocale();
-  const session = await getServerSession();
+export function Header() {
+  const t = useTranslations();
+  const locale = useLocale();
+  const [session, setSession] = useState<AuthUser | null>(null);
   const isAr = locale === "ar";
+
+  useEffect(() => {
+    // Call server action on client mount
+    getServerSession().then((res) => {
+      setSession(res);
+    });
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 transition-all dark:bg-background/95 dark:border-border">
