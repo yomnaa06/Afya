@@ -137,7 +137,11 @@ export function LoginForm() {
             <p className="text-muted-foreground text-base">{t("login_subtitle")}</p>
           </div>
 
-
+          {/* Demo hint */}
+          <div className="flex items-start gap-3 rounded-xl bg-primary/5 border border-primary/15 px-4 py-3 text-sm text-muted-foreground">
+            <Info className="w-4 h-4 mt-0.5 text-primary shrink-0" />
+            <span>{t("demo_hint")}</span>
+          </div>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
