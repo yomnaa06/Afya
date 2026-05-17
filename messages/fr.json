@@ -183,5 +183,26 @@
       "cramps": "Crampes",
       "swelling": "Gonflement"
     }
+  },
+  "auth": {
+    "login_title": "Bon retour",
+    "login_subtitle": "Connectez-vous à votre espace Afya+",
+    "email_label": "Adresse e-mail",
+    "email_placeholder": "vous@exemple.tn",
+    "password_label": "Mot de passe",
+    "password_placeholder": "Votre mot de passe",
+    "remember_me": "Se souvenir de moi",
+    "forgot_password": "Mot de passe oublié ?",
+    "sign_in": "Se connecter",
+    "signing_in": "Connexion en cours…",
+    "no_account": "Pas encore de compte ?",
+    "sign_up": "S'inscrire",
+    "or_continue": "Ou continuer avec",
+    "error_invalid": "Email ou mot de passe incorrect.",
+    "error_generic": "Une erreur est survenue. Veuillez réessayer.",
+    "success_welcome": "Bienvenue, {name} !",
+    "back_home": "Retour à l'accueil",
+    "demo_hint": "Démo : utilisez admin@afya.tn / Afya2026!",
+    "sign_out": "Se déconnecter"
   }
 }

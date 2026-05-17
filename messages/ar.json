@@ -183,5 +183,26 @@
             "cramps": "تشنجات",
             "swelling": "تورم"
         }
+    },
+    "auth": {
+        "login_title": "مرحبًا بعودتك",
+        "login_subtitle": "سجّل دخولك إلى فضائك في عافية+",
+        "email_label": "البريد الإلكتروني",
+        "email_placeholder": "you@example.tn",
+        "password_label": "كلمة المرور",
+        "password_placeholder": "كلمة المرور",
+        "remember_me": "تذكّرني",
+        "forgot_password": "نسيت كلمة المرور؟",
+        "sign_in": "تسجيل الدخول",
+        "signing_in": "جاري الدخول…",
+        "no_account": "ليس لديك حساب؟",
+        "sign_up": "إنشاء حساب",
+        "or_continue": "أو تابع بـ",
+        "error_invalid": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+        "error_generic": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+        "success_welcome": "أهلًا، {name}!",
+        "back_home": "العودة للرئيسية",
+        "demo_hint": "تجريبي: admin@afya.tn / Afya2026!",
+        "sign_out": "تسجيل الخروج"
     }
 }
