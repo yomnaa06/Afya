@@ -244,6 +244,19 @@ export function HealthMap({ facilities, selected, onSelect, userLocation }: Heal
         }
     }, [selected]);
 
+    // Pan map to user's exact location when they click "Me localiser"
+    useEffect(() => {
+        if (!mapRef.current || !userLocation) return;
+        
+        mapRef.current.setView([userLocation.lat, userLocation.lng], 15, {
+            animate: true,
+            pan: {
+                duration: 1.2,
+                easeLinearity: 0.25
+            }
+        });
+    }, [userLocation]);
+
     return (
         <div className="relative w-full h-full">
             {/* Custom Global overrides for Leaflet premium popups & zoom controls */}

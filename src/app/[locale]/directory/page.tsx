@@ -111,15 +111,6 @@ export default function DirectoryPage() {
             }
             
             setUserLocation({ lat, lng });
-            
-            // Find nearest facility
-            let nearest: Facility | null = null;
-            let minDist = Infinity;
-            FACILITIES.forEach(f => {
-                const d = Math.hypot(f.lat - lat, f.lng - lng);
-                if (d < minDist) { minDist = d; nearest = f; }
-            });
-            if (nearest) setSelected(nearest);
             setLocating(false);
         };
 
@@ -128,14 +119,6 @@ export default function DirectoryPage() {
             const lat = 36.8065;
             const lng = 10.1815;
             setUserLocation({ lat, lng });
-            
-            let nearest: Facility | null = null;
-            let minDist = Infinity;
-            FACILITIES.forEach(f => {
-                const d = Math.hypot(f.lat - lat, f.lng - lng);
-                if (d < minDist) { minDist = d; nearest = f; }
-            });
-            if (nearest) setSelected(nearest);
             setLocating(false);
         };
 
