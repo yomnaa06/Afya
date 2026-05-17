@@ -4,13 +4,18 @@ import { useState, useMemo } from "react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MapPin, Phone, Navigation, Search, X, Building2, Building, Pill, FlaskConical, Star } from "lucide-react";
+import dynamic from "next/dynamic";
 
-interface Facility {
-    id: string; name: string;
-    type: "Hôpital" | "Clinique" | "Pharmacie" | "Laboratoire";
-    city: string; address: string; phone: string;
-    cnam: boolean; guard?: boolean; lat: number; lng: number;
-}
+const HealthMap = dynamic(() => import("@/components/directory/health-map").then(mod => mod.HealthMap), {
+    ssr: false,
+    loading: () => (
+        <div className="w-full h-full flex items-center justify-center bg-slate-100 dark:bg-slate-900 animate-pulse">
+            <span className="text-slate-400 font-bold text-xs uppercase tracking-widest">Chargement de la carte...</span>
+        </div>
+    )
+});
+
+import type { Facility } from "@/components/directory/health-map";
 
 const FACILITIES: Facility[] = [
     { id:"h1", type:"Hôpital", name:"Hôpital Charles Nicolle", city:"Tunis", address:"Bd 9 Avril, Bab Saadoun", phone:"+216 71 578 000", cnam:true, lat:36.8299, lng:10.1636 },
@@ -73,12 +78,14 @@ export default function DirectoryPage() {
     const [selected, setSelected] = useState<Facility | null>(null);
     const [locating, setLocating] = useState(false);
     const [userCity, setUserCity] = useState<string | null>(null);
+    const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
 
     const handleLocate = () => {
         setLocating(true);
         navigator.geolocation.getCurrentPosition(
             (pos) => {
                 const { latitude, longitude } = pos.coords;
+                setUserLocation({ lat: latitude, lng: longitude });
                 // Find nearest facility
                 let nearest: Facility | null = null;
                 let minDist = Infinity;
@@ -113,13 +120,12 @@ export default function DirectoryPage() {
                 {/* ── LEFT: MAP ── */}
                 <div className="relative w-full lg:w-[58%] bg-slate-200 dark:bg-slate-900" style={{ height: "calc(100vh - 72px)", position: "sticky", top: "72px" }}>
 
-                    {/* Map iframe */}
-                    <iframe
-                        key={selected?.id ?? "default"}
-                        src={getMapSrc(selected)}
-                        title="Carte Santé Tunisie"
-                        style={{ width: "100%", height: "100%", border: "none", display: "block" }}
-                        loading="lazy"
+                    {/* High-fidelity interactive Map */}
+                    <HealthMap
+                        facilities={filtered}
+                        selected={selected}
+                        onSelect={setSelected}
+                        userLocation={userLocation}
                     />
 
                     {/* Overlay: Top bar */}
