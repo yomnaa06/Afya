@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { mockLogin, AuthUser } from "./mock-auth";
 
-export const SESSION_COOKIE = "afya_session";
+const SESSION_COOKIE = "afya_session";
 
 /** Cookie max-age: 7 days */
 const MAX_AGE = 60 * 60 * 24 * 7;
